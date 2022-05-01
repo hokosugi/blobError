@@ -1,3 +1,4 @@
+// Version: 1.0.0
 type TokenId = Nat;
 actor {
   stable var balancesEntries : [(Principal, Nat)];

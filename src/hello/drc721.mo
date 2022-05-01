@@ -10,6 +10,7 @@ import T "drc721_type";
 
 import Blob "mo:base/Blob";
 import Nat32  "mo:base/Nat32";
+import Nat8  "mo:base/Nat8";
 import Char "mo:base/Char";
 import Text "mo:base/Text";
 
@@ -56,8 +57,8 @@ actor class DRC721(_name : Text, _symbol : Text) {
         };
         return text;
     };
-    public func get_blob(b: Blob): async Text {
-        return Nat.toText(b.size());
+    public func get_blob(b: Nat8): async Text {
+        return Nat8.toText(b);
     };
 
     public shared func ownerOf(tokenId : T.TokenId) : async ?Principal {
