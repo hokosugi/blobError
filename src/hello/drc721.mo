@@ -40,7 +40,7 @@ actor class DRC721(_name : Text, _symbol : Text) {
         return "Hello, " # name # "!";
     };
 
-    public func get(t : Text): async Text {
+    public func get_text(t : Text): async Text {
         var arr:[Nat32] = [];
         var arr2: [Text] = [];
         var text = "result:";
